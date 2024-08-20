@@ -87,6 +87,7 @@ void Delete(int position){
         fprintf(stderr, "Nothing to delete\n");
         return;
     }
+
     if(position == 1){
         Node *del = head;
         head = del->next;
@@ -111,15 +112,35 @@ void Delete(int position){
 
 }
 
+void Update(char *message, int position){
+    if(position < 1 || head == NULL){
+        fprintf(stderr, "Nothing to be updated\n");
+        return;
+    }
+    Node *current = head;
+    for(int i = 1; i < position; ++i)
+        current = current->next;
+
+    if(current == NULL){
+        fprintf(stderr, "Out of bound\n");
+        return;
+    }
+    strcpy(current->data, message);
+}
+
 void Show(){
     Node *temp = head;
-    printf("[ ");
+    printf(" ");
     while(temp != NULL){
         printf("%s", temp->data);
         temp = temp->next;
         if(temp != NULL)
-            printf(", ");
+            printf("\n ");
     }
-    printf(" ]\n");
+    printf("\n");
 }
 
+void ClearBuffer(){
+    int c;
+    while( (c = getchar()) != '\n' && c != EOF);
+}

@@ -10,6 +10,9 @@ cd $REPO_NAME || exit
 
 git sparse-checkout set $DIRECTORY
 
-cd $REPO_NAME/$DIRECTORY && ./run
+cd dataStructure
 
+cd linklistMizo
+
+./run
 

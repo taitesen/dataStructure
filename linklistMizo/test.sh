@@ -10,7 +10,7 @@ cd $REPO_NAME || exit
 
 git sparse-checkout set $DIRECTORY
 
-wait 2
+wait 1
 
 cd dataStructure
 

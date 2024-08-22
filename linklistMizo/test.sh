@@ -10,6 +10,8 @@ cd $REPO_NAME || exit
 
 git sparse-checkout set $DIRECTORY
 
+wait 2
+
 cd dataStructure
 
 cd linklistMizo

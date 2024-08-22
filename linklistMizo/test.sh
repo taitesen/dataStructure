@@ -1,4 +1,15 @@
 #!/usr/bin/bash bash
 
-git clone https://github.com/taitesen/dataStructure.git && cd dataStructure && ./run
+GITHUB_USERNAME="taitesen"
+REPO_NAME="dataStructure"
+DIRECTORY="linklistMizo"
+
+git clone --dept 1 --filter=blob:none --sparse https://github.com/$GITHUB_USERNAME/$REPO_NAME.git
+
+cd $REPO_NAME || exit
+
+git sparse-checkout set $DIRECTORY
+
+cd $REPO_NAME/$DIRECTORY && ./run
+
 

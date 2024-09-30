@@ -8,8 +8,9 @@ int main(int argc, char *argv[]) {
     Stack *my_stack = init_stack();
     if(argc > 1) {
         Reverse(argv[1], my_stack);
+    } else {
+        fprintf(stderr, "String is not provided.\n");
     }
-
     return 0;
 }
 

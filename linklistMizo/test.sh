@@ -1,4 +1,4 @@
-#!/usr/bin/bash bash
+#!/usr/bin/env bash
 
 GITHUB_USERNAME="taitesen"
 REPO_NAME="dataStructure"

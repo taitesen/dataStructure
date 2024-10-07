@@ -5,10 +5,10 @@
 #define RESIZE_FACTOR 2
 
 typedef struct {
-    char **data;
-    int size;
-    int top;
-}Stack_node;
+        char **data;
+        int size;
+        int top;
+} Stack_node;
 
 Stack_node *Initialize_stack(void);
 

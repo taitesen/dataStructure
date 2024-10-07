@@ -18,10 +18,10 @@ int main() {
 
 void Reverse(char *arr, Linklist *test) {
     size_t size = strlen(arr);
-    for(size_t i = 0; i < size; ++i) {
+    for (size_t i = 0; i < size; ++i) {
         test->Push(test, arr[i]);
     }
-    for(size_t i = 0; i < size; ++i) {
+    for (size_t i = 0; i < size; ++i) {
         test->Pop(test);
     }
     printf("\n");

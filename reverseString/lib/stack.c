@@ -5,7 +5,7 @@ Stack_node *top = NULL;
 
 void Push(char character) {
     Stack_node *temp = malloc(sizeof(Stack_node));
-    if(temp == NULL) return;
+    if (temp == NULL) return;
     temp->data = character;
     temp->link = top;
     top = temp;
@@ -13,7 +13,7 @@ void Push(char character) {
 
 char Pop() {
     Stack_node *temp = top;
-    if(temp == NULL) {
+    if (temp == NULL) {
         fprintf(stderr, "The stack is empty\n");
         return '\0';
     }

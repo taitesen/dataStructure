@@ -1,12 +1,11 @@
 #ifndef _LINKLIST_QUEUE
 #define _LINKLIST_QUEUE
 
-
 // Strucuter of queue node
-typedef struct Node{
-    int data;
-    struct Node *next;
-}QueueNode;
+typedef struct Node {
+        int data;
+        struct Node *next;
+} QueueNode;
 
 extern QueueNode *front;
 extern QueueNode *rear;

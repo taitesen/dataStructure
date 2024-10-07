@@ -1,10 +1,10 @@
 #ifndef LINKLIST_H
 #define LINKLIST_H
 
-typedef struct Node{
-    char *data;
-    struct Node *next;
-}Node;
+typedef struct Node {
+        char *data;
+        struct Node *next;
+} Node;
 
 extern Node *head;
 
@@ -18,4 +18,3 @@ void ClearBuffer(void);
 int CountNode(void);
 
 #endif // LINKLIST_H
-

@@ -1,6 +1,6 @@
 #include "../include/lib.h"
-#include <stdio.h>
 #include <malloc.h>
+#include <stdio.h>
 
 QueueNode *front = NULL;
 QueueNode *rear = NULL;
@@ -8,7 +8,7 @@ int count = 0;
 
 QueueNode *getNewNode(int data) {
     QueueNode *temp = malloc(sizeof(QueueNode));
-    if(temp == NULL) return NULL;
+    if (temp == NULL) return NULL;
     temp->data = data;
     temp->next = NULL;
     return temp;
@@ -16,8 +16,8 @@ QueueNode *getNewNode(int data) {
 
 void Enque(int data) {
     QueueNode *node = getNewNode(data);
-    if(node == NULL) return;
-    if(count == 0) {
+    if (node == NULL) return;
+    if (count == 0) {
         rear = node;
         front = node;
     } else {
@@ -28,7 +28,7 @@ void Enque(int data) {
 }
 
 void Deque() {
-    if(count == 0) {
+    if (count == 0) {
         fprintf(stderr, "The queue is empty\n");
         return;
     }
@@ -36,20 +36,18 @@ void Deque() {
     front = temp->next;
     free(temp);
     count--;
-    if(count == 0) {
+    if (count == 0) {
         rear = NULL;
         front = NULL;
     }
 }
 
 void Front() {
-    if(isEmpty()) {
+    if (isEmpty()) {
         fprintf(stderr, "The queue is empty\n");
         return;
     }
     printf("The front of the queue: %d\n", front->data);
 }
 
-int isEmpty() {
-    return count == 0;
-}
+int isEmpty() { return count == 0; }

@@ -3,7 +3,7 @@
 
 Stack *init_stack() {
     Stack *newStack = (Stack *)malloc(sizeof(Stack));
-    if(newStack == NULL) return NULL;
+    if (newStack == NULL) return NULL;
     newStack->size = SIZE;
     newStack->character = malloc(sizeof(char) * newStack->size);
     newStack->index = -1;
@@ -13,7 +13,7 @@ Stack *init_stack() {
 void Resize(Stack *stack) {
     stack->size *= RESIZE_FACTOR;
     char *new_character = malloc(sizeof(char) * stack->size);
-    for(int i = 0; i < stack->index; ++i) {
+    for (int i = 0; i < stack->index; ++i) {
         new_character[i] = stack->character[i];
     }
     free(stack->character);
@@ -21,19 +21,20 @@ void Resize(Stack *stack) {
 }
 
 void Push(char character, Stack *stack) {
-    if(stack->index > (int)stack->size) Resize(stack);
+    if (stack->index > (int)stack->size)
+        Resize(stack);
     stack->character[++stack->index] = character;
 }
 
 char Pop(Stack *stack) {
-    if(stack->index < 0 ) {
+    if (stack->index < 0) {
         fprintf(stderr, "The stack is empty\n");
         return '\0';
     }
     return stack->character[stack->index--];
 }
 
-void clean_stack(Stack *stack){
+void clean_stack(Stack *stack) {
     free(stack->character);
     free(stack);
 }

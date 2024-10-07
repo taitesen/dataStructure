@@ -3,9 +3,9 @@
 
 Queue *initQ() {
     Queue *temp = malloc(sizeof(Queue));
-    if(temp == NULL) return NULL;
+    if (temp == NULL) return NULL;
     temp->data = malloc(sizeof(int) * SIZE);
-    if(temp->data == NULL) {
+    if (temp->data == NULL) {
         free(temp);
         return NULL;
     }
@@ -17,7 +17,7 @@ Queue *initQ() {
 
 void Enque(Queue *queue, int data) {
     // if the queue is full, it will not enque, but abort this function
-    if(queue->count == SIZE) {
+    if (queue->count == SIZE) {
         fprintf(stderr, "The queue is full\n");
         return;
     }
@@ -30,7 +30,7 @@ void Enque(Queue *queue, int data) {
 
 int Deque(Queue *queue) {
     // if the queue is empty, there is nothing to dequeu, and will abort
-    if(queue->count == 0) {
+    if (queue->count == 0) {
         fprintf(stderr, "The queue is empty\n");
         return -1;
     }
@@ -42,7 +42,7 @@ int Deque(Queue *queue) {
 }
 
 void Front(Queue *queue) {
-    if(queue->count == 0) {
+    if (queue->count == 0) {
         fprintf(stderr, "The queue is empty\n");
         return;
     }
@@ -50,7 +50,7 @@ void Front(Queue *queue) {
 }
 
 void FreeQueue(Queue *queue) {
-    if(queue) {
+    if (queue) {
         free(queue->data); // free the data array
         free(queue);       // free the queue structure
     }

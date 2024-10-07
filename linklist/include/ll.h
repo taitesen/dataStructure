@@ -1,10 +1,10 @@
 #ifndef LINKLIST_H
 #define LINKLIST_H
 
-typedef struct Node{
-    char *data;
-    struct Node *next;
-}Node;
+typedef struct Node {
+        char *data;
+        struct Node *next;
+} Node;
 
 void InsertAtBegin(char *message);
 void InsertAtEnd(char *message);

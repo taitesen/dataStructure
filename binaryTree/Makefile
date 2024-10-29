@@ -15,7 +15,7 @@ TARGET = bin
 all: $(TARGET)
 
 $(TARGET): $(OBJ)
-	@$(CC) -o $^ $@
+	@$(CC) -o $@ $^
 
 $(OBJ_DIR)/main.o: $(SRC)
 	@mkdir -p $(dir $@)

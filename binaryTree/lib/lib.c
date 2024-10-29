@@ -45,5 +45,5 @@ int maxVal(Bst *root) {
 
 int findHeight(Bst *root) {
     if(!root) return -1;
-    return (findHeight(root->left), findHeight(root->right)) + 1;
+    return max(findHeight(root->left), findHeight(root->right)) + 1;
 }

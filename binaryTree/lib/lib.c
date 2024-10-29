@@ -31,14 +31,14 @@ bool search(Bst *root, int data) {
 
 int minVal(Bst *root) {
     if(!root) return -1;
-    while(!root->left)
+    while(root->left)
         root = root->left;
     return root->data;
 }
 
 int maxVal(Bst *root) {
     if(!root) return -1;
-    while(!root->right)
+    while(root->right)
         root = root->right;
     return root->data;
 }

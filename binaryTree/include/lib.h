@@ -12,8 +12,8 @@ typedef struct Bst{
 Bst *getNewNode(int);
 Bst *insert(Bst *, int);
 bool search(Bst *, int);
-int minVal(Bst *, int);
-int maxVal(Bst *, int);
+int minVal(Bst *);
+int maxVal(Bst *);
 int findHeight(Bst *);
 
 #endif // _BI_TREE_H

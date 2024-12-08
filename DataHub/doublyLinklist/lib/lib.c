@@ -131,3 +131,31 @@ void insertAfterData(int dataToBeInserted, int indexData) {
     current->next = temp;
     temp->prev = current;
 }
+
+void insertBeforeData(int dataToBeInserted, int indexData) {
+    Node *temp = getNewNode(dataToBeInserted);
+    if(!temp) return;
+
+    if(HEAD == NULL) {
+        free(temp);
+        fprintf(stderr, "The list is empty\n");
+        return;
+    }
+
+    Node *current = HEAD;
+    while(current != NULL) {
+        if(current == NULL) break;
+        if(current->data == indexData) break;
+        current = current->next;
+    }
+
+    if(current == NULL) {
+        fprintf(stderr, "%d in not found\n", indexData);
+        free(temp);
+        return;
+    }
+
+    temp->prev = current->prev;
+    temp->next = current;
+    current->prev = temp;
+}

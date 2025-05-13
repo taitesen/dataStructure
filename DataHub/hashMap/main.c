@@ -114,7 +114,7 @@ void remove_key(HashMap *map, const char *key) {
     while (current) {
         if (strcmp(current->key, key) == 0) {
             if (prev) {
-                prev->next = current;
+                prev->next = current->next;
             } else {
                 map->bucket[index] = current->next;
             }
@@ -167,7 +167,7 @@ void printHashMap(HashMap *map) {
 
 int main() {
     // Create a hashmap
-    HashMap *employee = createHashMap(10);
+    HashMap *employee = createHashMap(4);
 
     // Insert some key-value pairs
     insert(employee, "Arthur", 75000);

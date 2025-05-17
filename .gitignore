@@ -1,0 +1,28 @@
+# Ignore executable files (commonly no extension or .exe)
+*.exe
+*.out
+*.elf
+
+# Ignore object files
+*.o
+*.obj
+
+# Ignore compiled libraries
+*.a
+*.so
+*.dll
+*.dylib
+
+# Editor temporary files (optional but useful)
+*~
+*.swp
+
+# Ignore the binary file with no extension (like "main" or "program")
+main
+program
+a.out
+
+# Ignore all files with no extension that are executable (Linux/Mac only)
+# This one is a bit broader:
+# Uncomment if you want to ignore all executables (use with caution)
+[ -x "$f" ] && [[ ! "$f" == *.* ]] && echo "$f"

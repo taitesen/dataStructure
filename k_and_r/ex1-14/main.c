@@ -1,6 +1,5 @@
 /*
 A program to print a hisotgram of the frequencies of different characters in its
-input For simplicity, only alphabet and +ve numbers are allowed
 */
 
 #include <ctype.h>

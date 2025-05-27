@@ -1,0 +1,11 @@
+--- TEST INPUT FILES ---
+The program can read a character of only 100 length per lines.
+So we need to take measures on the length of each lines that is about to be feed on to the program.
+Every instance of a line in a file must not exceed a length of 100 characters
+Now, given that every lines do not exceed a maximum of 100 characters, the program is going to print
+the lines which are longer than 80 chactacters.
+Meaning some lines need to exceed a length of 80 characters in order to find out
+if the program works or not.
+
+Note: some lines are exactly 99 and 100. Watch carefull how they behaves
+Tweak the define values of MAXLEN so see what happens

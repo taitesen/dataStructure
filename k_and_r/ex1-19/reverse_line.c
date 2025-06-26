@@ -12,7 +12,6 @@ write a program that reverses its input a line at a time
 
 #define MAX_L 100
 
-
 int get_line(char string[], int max_l);
 char *reverse(char string[], int len);
 

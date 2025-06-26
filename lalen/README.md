@@ -28,7 +28,7 @@ Lalen is a simple wrapper around Git that allows you to version control your dot
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/lalen.git
+git clone https://github.com/taitesen/lalen.git
 cd lalen
 
 # Build and install
